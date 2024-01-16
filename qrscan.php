@@ -1,4 +1,5 @@
 <?php
+include "config.php";
 session_start();
 if (isset($_GET['qrCode'])) {
     // Get the QR code data from the AJAX request
