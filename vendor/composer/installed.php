@@ -1,59 +1,60 @@
-<?php return array(
-    'root' => array(
-        'name' => '__root__',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '95a341a4ebfbed7b3f3b27af12d412ab3c78299f',
-        'type' => 'library',
-        'install_path' => __DIR__ . '/../../',
-        'aliases' => array(),
-        'dev' => true,
+<?php return array (
+  'root' => 
+  array (
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
+    'aliases' => 
+    array (
     ),
-    'versions' => array(
-        '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '95a341a4ebfbed7b3f3b27af12d412ab3c78299f',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'bacon/bacon-qr-code' => array(
-            'pretty_version' => '2.0.8',
-            'version' => '2.0.8.0',
-            'reference' => '8674e51bb65af933a5ffaf1c308a660387c35c22',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../bacon/bacon-qr-code',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'dasprid/enum' => array(
-            'pretty_version' => '1.0.5',
-            'version' => '1.0.5.0',
-            'reference' => '6faf451159fb8ba4126b925ed2d78acfce0dc016',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../dasprid/enum',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'endroid/qr-code' => array(
-            'pretty_version' => '4.6.1',
-            'version' => '4.6.1.0',
-            'reference' => 'a75c913b0e4d6ad275e49a2c1de1cacffc6c2184',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../endroid/qr-code',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'khanamiryan/qrcode-detector-decoder' => array(
-            'pretty_version' => '1.0.6',
-            'version' => '1.0.6.0',
-            'reference' => '45326fb83a2a375065dbb3a134b5b8a5872da569',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../khanamiryan/qrcode-detector-decoder',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
+    'reference' => '79c8ecf7fff19974365c71e5a82a6173d7921838',
+    'name' => '__root__',
+  ),
+  'versions' => 
+  array (
+    '__root__' => 
+    array (
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '79c8ecf7fff19974365c71e5a82a6173d7921838',
     ),
+    'bacon/bacon-qr-code' => 
+    array (
+      'pretty_version' => '2.0.8',
+      'version' => '2.0.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8674e51bb65af933a5ffaf1c308a660387c35c22',
+    ),
+    'dasprid/enum' => 
+    array (
+      'pretty_version' => '1.0.5',
+      'version' => '1.0.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6faf451159fb8ba4126b925ed2d78acfce0dc016',
+    ),
+    'endroid/qr-code' => 
+    array (
+      'pretty_version' => '4.6.1',
+      'version' => '4.6.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a75c913b0e4d6ad275e49a2c1de1cacffc6c2184',
+    ),
+    'khanamiryan/qrcode-detector-decoder' => 
+    array (
+      'pretty_version' => '1.0.6',
+      'version' => '1.0.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '45326fb83a2a375065dbb3a134b5b8a5872da569',
+    ),
+  ),
 );
