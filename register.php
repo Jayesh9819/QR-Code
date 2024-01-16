@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if (mysqli_stmt_affected_rows($stmt) > 0) {
             echo "<script>alert('Registration successful');</script>";
-            header("location: login.php");
+            header("location: Login.php");
             exit;
         } else {
             echo "<script>alert('Error in registration');</script>";

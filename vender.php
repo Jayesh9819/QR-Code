@@ -1,6 +1,5 @@
 <!-- index.php -->
 <?php
-include 'session.php';
 include 'config.php';
 
 $user_id = $_SESSION['user_id'];
