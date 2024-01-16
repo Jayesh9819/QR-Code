@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['user_name'] = $user_data['Fname'];
                 $_SESSION['type'] = $user_data['type'];
                 $_SESSION['no'] = $user_data['no'];
-                $_SESSION['User_id'] = $user_data['id'];
+                $_SESSION['User_id'] = $user_data['SR.NO'];
                 $type = $_SESSION['type'];
 
                 switch ($type) {
