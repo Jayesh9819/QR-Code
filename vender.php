@@ -1,5 +1,6 @@
-<!-- index.php -->
 <?php
+session_start(); // Start the session
+
 include 'config.php';
 echo $_SESSION['User_id'];
 $user_id = $_SESSION['User_id'];
@@ -25,7 +26,7 @@ $result = $stmt->get_result();
 <body>
     <h1>Scan Data</h1>
 
-   <a href="./qrscan.php"> <button>Scan</button></a>
+    <a href="./scanner.html"><button>Scan</button></a>
 
     <table border="1">
         <thead>
