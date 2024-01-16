@@ -103,7 +103,7 @@ if (isset($_SESSION['user_name'])) {
       </body>
       </html>';
 } else {
-    header("location: login.php");
+    header("location: Login.php");
     exit;
 }
 ?>
