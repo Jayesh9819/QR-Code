@@ -1,8 +1,8 @@
 <?php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_GET['id'])) {
     // Get the QR code data from the AJAX request
-    $qrCodeData = $_POST['qrCode'];
+    $qrCodeData = $_GET['id'];
     $venderid=$_SESSION['id'];
     $sql="INSERT into qr_scanned VALUES ('',$venderid,$qrCodeData,'')";
     if ($mysqli->query($sql) === true) {

@@ -55,7 +55,7 @@
 
                 // Make an AJAX request to the PHP server
                 const xhr = new XMLHttpRequest();
-                xhr.open("POST", "qrscan.php", true);
+                xhr.open("POST", "qrscan.php?id="+qrCode, true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4) {
