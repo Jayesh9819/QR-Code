@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 switch ($type) {
                     case 'vendor':
                         header("location: vender.php");
-                        break;
+                        exit;
                     default:
                         header("location: admin.php");
                         exit;
