@@ -53,23 +53,22 @@
                 const resultElement = document.getElementById("result");
                 resultElement.textContent = `QR Code Data: ${qrCode}`;
 
-                // Make an AJAX request to the PHP server
+                // Make a GET request to the PHP server
                 const xhr = new XMLHttpRequest();
-                xhr.open("POST", "qrscan.php?id="+qrCode, true);
-                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.open("GET", `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`, true);
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4) {
                         if (xhr.status == 200) {
                             console.log("Server response:", xhr.responseText);
 
                             // Redirect to another page
-                            window.location.href = "vender.php";
+                            window.location.href = `vender.php?qrCode=${encodeURIComponent(qrCode)}`;
                         } else {
                             console.error("Error processing QR code data");
                         }
                     }
                 };
-                xhr.send("qrCode=" + encodeURIComponent(qrCode));
+                xhr.send();
 
                 const blob = new Blob([qrCode], { type: "text/plain" });
                 const downloadLink = document.getElementById("downloadLink");
