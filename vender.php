@@ -1,19 +1,18 @@
 <!-- index.php -->
 <?php
-include "config.php";
+include 'session.php';
+include 'config.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Get the QR code data from the AJAX request
-    $qrCodeData = $_POST['qrCode'];
-    $sql="INSERT INTO QR";
+$user_id = $_SESSION['user_id'];
 
-    echo $qrCodeData;
-
-    echo "Received QR Code Data: $qrCodeData";
-} else {
-    http_response_code(400);
-    echo "Invalid request method";
-}
+// Fetch data from the qr_scanned table for the logged-in vendor
+$query = "SELECT * FROM registration
+JOIN qr_scanned ON qr_scanned.user_id = registration.UniqueID
+WHERE qr_scanned.vender_id = ?";
+$stmt = $mysqli->prepare($query);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
