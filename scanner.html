@@ -62,7 +62,7 @@
                             console.log("Server response:", xhr.responseText);
 
                             // Redirect to another page
-                            window.location.href = `vender.php?qrCode=${encodeURIComponent(qrCode)}`;
+                            window.location.href = `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`;
                         } else {
                             console.error("Error processing QR code data");
                         }
