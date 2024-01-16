@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $type = $_SESSION['type'];
 
                 switch ($type) {
-                    case 'vender':
+                    case 'vendor':
                         header("location: vender.php");
                         break;
                     default:
