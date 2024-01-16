@@ -64,6 +64,8 @@
                 <select name="designation" id="designation" class="form-control" required>
                     <option value="admin">Admin</option>
                     <option value="registrationdesk">Registration Desk</option>
+                    <option value="vendor">Vendor Desk</option>
+
                 </select>
             </div>
         </div>

@@ -27,6 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['user_name'] = $user_data['Fname'];
                 $_SESSION['type'] = $user_data['type'];
                 $_SESSION['no'] = $user_data['no'];
+                $_SESSION['User_id'] = $user_data['id'];
+                $type = $_SESSION['type'];
+
+                switch ($type) {
+                    case 'vender':
+                        header("location: vender.php");
+                        break;
+                    default:
+                        header("location: admin.php");
+                        exit;
+                }
+
+
 
 
                 header("location: admin.php");
@@ -68,13 +81,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
               </div>
               
               ';
-            }elseif($err == 'user'){
-                echo '      <div class="alert alert-danger" role="alert">
-                Wrong Email 
+            } elseif ($err == 'user') {
+                echo '      <div class="alert alert-danger" role="alert">Wrong Email 
               </div>
-              
               ';
-
             }
         }
         ?>
