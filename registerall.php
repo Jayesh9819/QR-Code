@@ -63,6 +63,8 @@
             <div class="col-sm-9">
                 <select name="designation" id="designation" class="form-control" required>
                     <option value="admin">Admin</option>
+                    <option value="vendor">Vendor Desk</option>
+
                     <option value="registrationdesk">Registration Desk</option>
                     <option value="vendor">Vendor Desk</option>
 
