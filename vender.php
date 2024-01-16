@@ -40,7 +40,7 @@ $result = $stmt->get_result();
             <?php
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row['Fname'] . "</td>";
+                echo "<td>" . $row['Name'] . "</td>";
                 echo "<td>" . $row['Email'] . "</td>";
                 echo "<td>" . $row['Phone'] . "</td>";
                 echo "</tr>";
