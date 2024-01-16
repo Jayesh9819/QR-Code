@@ -55,7 +55,7 @@
 
                 // Make a GET request to the PHP server
                 const xhr = new XMLHttpRequest();
-                xhr.open("GET", `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`, true);
+                xhr.open("POST", `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`, true);
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4) {
                         if (xhr.status == 200) {
