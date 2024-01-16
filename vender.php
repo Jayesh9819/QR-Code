@@ -1,8 +1,9 @@
 <!-- index.php -->
 <?php
 include 'config.php';
-
+echo $_SESSION['User_id'];
 $user_id = $_SESSION['User_id'];
+echo $user_id;
 
 // Fetch data from the qr_scanned table for the logged-in vendor
 $query = "SELECT * FROM registration
