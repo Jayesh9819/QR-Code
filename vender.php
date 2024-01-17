@@ -2,7 +2,7 @@
 session_start(); // Start the session
 
 include 'config.php';
-echo $_SESSION['User_id'];
+// echo $_SESSION['User_id'];
 $user_id = $_SESSION['User_id'];
 echo $user_id;
 
