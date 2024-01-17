@@ -50,8 +50,8 @@
             (qrCode, _error) => {
                 console.log("QR Code detected:", qrCode);
 
-                const resultElement = document.getElementById("result");
-                resultElement.textContent = `QR Code Data: ${qrCode}`;
+                // const resultElement = document.getElementById("result");
+                // resultElement.textContent = `QR Code Data: ${qrCode}`;
                 window.location.href = `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`;
 
                 // Make a GET request to the PHP server
@@ -71,10 +71,10 @@
                 // };
                 // xhr.send();
 
-                const blob = new Blob([qrCode], { type: "text/plain" });
-                const downloadLink = document.getElementById("downloadLink");
-                downloadLink.href = URL.createObjectURL(blob);
-                downloadLink.style.display = "block";
+                // const blob = new Blob([qrCode], { type: "text/plain" });
+                // const downloadLink = document.getElementById("downloadLink");
+                // downloadLink.href = URL.createObjectURL(blob);
+                // downloadLink.style.display = "block";
             },
             (errorMessage) => {
                 console.error(errorMessage);
