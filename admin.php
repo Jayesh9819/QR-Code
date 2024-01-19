@@ -70,7 +70,7 @@ if (isset($_SESSION['user_name'])) {
                           <td>' . $row->Phone . '</td>
                           <td>' . $row->Email . '</td>
                           <td><img src="' . $row->OR . '" width="50px" height="50px"></td>
-                          <td><a href="Try.php&id='.$row->Id.'">Download QR</a></td>
+                          <td><a href="Try.php?id='.$row->Id.'">Download QR</a></td>
                       </tr>';
             }
         }
