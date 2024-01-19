@@ -22,10 +22,10 @@ $pdf->SetFont('helvetica', 'B', 14);
 $pdf->SetTextColor(255, 0, 0); // Set text color to red
 
 // Add background image
-$pdf->Image('background.jpg', 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
+$pdf->Image('./image/BG.png', 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
 
 // Add QR code
-$pdf->Image($data['OR'], 50, 10, 80, 80, 'png');
+$pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
 
 // Set position for name and number
 $namePosition = 50;
