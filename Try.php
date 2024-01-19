@@ -26,7 +26,8 @@ $pdf->SetTitle('ID Card');
 $pdf->AddPage();
 
 // Set font
-$pdf->SetFont('Arial', 'B', 14);
+// Use Helvetica font
+$pdf->SetFont('helvetica', 'B', 14);
 
 // Output data on the PDF
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
