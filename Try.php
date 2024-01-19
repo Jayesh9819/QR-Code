@@ -1,6 +1,6 @@
 <?php
 // Include TCPDF
-require_once('tcpdf/tcpdf.php');
+require_once('library/tcpdf.php');
 include "./config.php";
 
 // Get the ID from the URI
