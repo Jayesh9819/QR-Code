@@ -20,7 +20,7 @@ $pdf->SetTitle('ID Card');
 $pdf->AddPage();
 $pdf->SetFont('helvetica', 'B', 14);
 
-$pdf->Image($data['OR'], 10, 50, 40, 40, 'png');
+$pdf->Image($data['OR'], 50, 10, 80, 80, 'png');
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
 $pdf->Cell(0, 10, 'Number: ' . $data['Phone'], 0, 1);
 
