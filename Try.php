@@ -19,13 +19,25 @@ $pdf->SetAuthor('CS');
 $pdf->SetTitle('ID Card');
 $pdf->AddPage();
 $pdf->SetFont('helvetica', 'B', 14);
+$pdf->SetTextColor(255, 0, 0); // Set text color to red
 
+// Add background image
+$pdf->Image('background.jpg', 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
+
+// Add QR code
 $pdf->Image($data['OR'], 50, 10, 80, 80, 'png');
+
+// Set position for name and number
+$namePosition = 50;
+$numberPosition = 100;
+
+// Output data on the PDF
+$pdf->SetXY($namePosition, 90);
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
+
+$pdf->SetXY($numberPosition, 100);
 $pdf->Cell(0, 10, 'Number: ' . $data['Phone'], 0, 1);
 
-// Add image (assuming $data['qr_code_path'] is the path to the QR code image)
-$id=$data['UniqueID'];
 // Output the PDF to the browser
 $pdf->Output('id_card_' . $id . '.pdf', 'I');
 ?>
