@@ -13,24 +13,14 @@ $stmt->bind_param('i', $id);
 $stmt->execute();
 $result = $stmt->get_result();
 $data = $result->fetch_assoc();
-
-// Create a new TCPDF instance
 $pdf = new TCPDF();
-
-// Set document information
-$pdf->SetCreator('Your Creator');
-$pdf->SetAuthor('Your Author');
+$pdf->SetCreator('JD');
+$pdf->SetAuthor('CS');
 $pdf->SetTitle('ID Card');
-
-// Add a page
 $pdf->AddPage();
-
-// Set font
-// Use Helvetica font
 $pdf->SetFont('helvetica', 'B', 14);
 
 $pdf->Image($data['OR'], 10, 50, 40, 40, 'png');
-// Output data on the PDF
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
 $pdf->Cell(0, 10, 'Number: ' . $data['Phone'], 0, 1);
 
