@@ -62,7 +62,7 @@ if (isset($_SESSION['user_name'])) {
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_object()) {
                 echo '<tr>
-                          <td>' . $row->Id . '</td>
+                          <td>' .$id= $row->Id . '</td>
                           <td>' . $row->Name . '</td>
                           <td>' . $row->Designation . '</td>
                           <td>' . $row->NOC . '</td>
@@ -70,7 +70,7 @@ if (isset($_SESSION['user_name'])) {
                           <td>' . $row->Phone . '</td>
                           <td>' . $row->Email . '</td>
                           <td><img src="' . $row->OR . '" width="50px" height="50px"></td>
-                          <td><a href="Try.php">Download QR</a></td>
+                          <td><a href="Try.php&id='.$id.'">Download QR</a></td>
                       </tr>';
             }
         }
