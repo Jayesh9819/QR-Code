@@ -29,12 +29,12 @@ $pdf->AddPage();
 // Use Helvetica font
 $pdf->SetFont('helvetica', 'B', 14);
 
+$pdf->Image($data['OR'], 10, 50, 40, 40, 'png');
 // Output data on the PDF
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
 $pdf->Cell(0, 10, 'Number: ' . $data['Phone'], 0, 1);
 
 // Add image (assuming $data['qr_code_path'] is the path to the QR code image)
-$pdf->Image($data['OR'], 10, 50, 40, 40, 'png');
 $id=$data['UniqueID'];
 // Output the PDF to the browser
 $pdf->Output('id_card_' . $id . '.pdf', 'I');
