@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Successful Message Example</title>
+  <title>Registration Successful</title>
 
   <meta name="author" content="Codeconvey" />
   <!-- Message Box CSS -->
@@ -35,8 +35,15 @@
     <div class="rt-container">
       <div class="col-rt-12">
         <div class="rt-heading">
-          <h1>Registration Successful Message Example</h1>
-          <p>A registration successful message box in HTML and CSS. </p>
+          <h1>Registration Successful</h1>
+          <p><?php 
+          if(isset($_GET['msg'])){
+            $msg=$_GET['msg'];
+
+
+          }
+          
+          ?></p>
         </div>
       </div>
     </div>
@@ -71,7 +78,7 @@
             </div>
             <div id='lower-side'>
               <p id='message'>
-                Congratulations, your account has been successfully created.
+                Congratulations, your are registered successfully. Get you id from desk <?php echo $msg?>
               </p>
               <a href="#" id="contBtn">Continue</a>
             </div>
