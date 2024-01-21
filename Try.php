@@ -15,8 +15,8 @@ $result = $stmt->get_result();
 $data = $result->fetch_assoc();
 
 // Define the custom page size (in millimeters)
-$pageWidth = 297 * 2; // 3 times A4 width
-$pageHeight = 210 *3  ; // 2 times A4 height
+$pageWidth = 160; // 3 times A4 width
+$pageHeight = 240  ; // 2 times A4 height
 
 // Create TCPDF instance with custom page size
 $pdf = new TCPDF('P', 'mm', array($pageWidth, $pageHeight), true, 'UTF-8', false);
