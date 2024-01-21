@@ -30,7 +30,7 @@ $pdf->SetFont('helvetica', 'B', 14);
 $pdf->SetTextColor(255, 0, 0); // Set text color to red
 
 // Add background image
-$pdf->Image('./image/bg1.png', 0, 0, 85, 114, '', '', '', false, 300, '', false, false, 0);
+$pdf->Image('./image/bg1.png', 0, 0, 170, 250, '', '', '', false, 300, '', false, false, 0);
 
 // Add QR code
 $pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
