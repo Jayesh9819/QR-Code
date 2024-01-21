@@ -36,11 +36,11 @@ $pdf->Image('./image/bg1.png', 0, 0, 160, 240, '', '', '', false, 300, '', false
 $pdf->Image($data['OR'], 50, 50, 50, 50, 'png');
 
 // Set position for name and number
-$namePosition = 70;
+$namePosition = 50;
 $numberPosition = 100;
 
 // Output data on the PDF
-$pdf->SetXY($namePosition, 90);
+$pdf->SetXY($namePosition, 130);
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
 
 $pdf->SetXY($numberPosition, 100);
