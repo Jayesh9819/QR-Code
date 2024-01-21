@@ -40,47 +40,35 @@
 
     <script>
         const qrReader = new Html5Qrcode("my-qr-reader");
-
-        qrReader.start(
-            { facingMode: "environment" },
-            {
-                fps: 10,
-                qrbox: { width: 250, height: 250 },
-            },
-            (qrCode, _error) => {
-                console.log("QR Code detected:", qrCode);
-
-                // const resultElement = document.getElementById("result");
-                // resultElement.textContent = `QR Code Data: ${qrCode}`;
-                window.location.href = `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`;
-
-                // Make a GET request to the PHP server
-                // const xhr = new XMLHttpRequest();
-                // xhr.open("POST", `qrscan.php`, true);
-                // xhr.onreadystatechange = function () {
-                //     if (xhr.readyState == 4) {
-                //         if (xhr.status == 200) {
-                //             console.log("Server response:", xhr.responseText);
-
-                //             // Redirect to another page
-                //             window.location.href = `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`;
-                //         } else {
-                //             console.error("Error processing QR code data");
-                //         }
-                //     }
-                // };
-                // xhr.send();
-
-                // const blob = new Blob([qrCode], { type: "text/plain" });
-                // const downloadLink = document.getElementById("downloadLink");
-                // downloadLink.href = URL.createObjectURL(blob);
-                // downloadLink.style.display = "block";
-            },
-            (errorMessage) => {
-                console.error(errorMessage);
-            }
-        );
+    
+        const startQRCodeScanner = () => {
+            qrReader.start(
+                { facingMode: "environment" },
+                {
+                    fps: 10,
+                    qrbox: { width: 250, height: 250 },
+                },
+                (qrCode, _error) => {
+                    console.log("QR Code detected:", qrCode);
+                    window.location.href = `qrscan.php?qrCode=${encodeURIComponent(qrCode)}`;
+                },
+                (errorMessage) => {
+                    console.error(errorMessage);
+                }
+            );
+        };
+    
+        const stopQRCodeScanner = () => {
+            qrReader.stop();
+        };
+    
+        // Start QR code scanning when the page loads
+        startQRCodeScanner();
+    
+        // Stop QR code scanning when the page is unloaded or user navigates away
+        window.addEventListener("beforeunload", stopQRCodeScanner);
     </script>
+    
 </body>
 
 </html>
