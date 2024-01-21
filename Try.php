@@ -36,7 +36,7 @@ $pdf->Image('./image/bg1.png', 0, 0, 160, 240, '', '', '', false, 300, '', false
 $pdf->Image($data['OR'], 50, 50, 50, 50, 'png');
 
 // Set position for name and number
-$namePosition = 50;
+$namePosition = 70;
 $numberPosition = 100;
 
 // Output data on the PDF
