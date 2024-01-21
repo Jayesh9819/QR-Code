@@ -13,16 +13,24 @@ $stmt->bind_param('i', $id);
 $stmt->execute();
 $result = $stmt->get_result();
 $data = $result->fetch_assoc();
-$pdf = new TCPDF();
+
+// Define the custom page size (in millimeters)
+$pageWidth = 297 * 3; // 3 times A4 width
+$pageHeight = 210 * 2; // 2 times A4 height
+
+// Create TCPDF instance with custom page size
+$pdf = new TCPDF('L', 'mm', array($pageWidth, $pageHeight), true, 'UTF-8', false);
+
 $pdf->SetCreator('JD');
 $pdf->SetAuthor('CS');
 $pdf->SetTitle('ID Card');
 $pdf->AddPage();
+
 $pdf->SetFont('helvetica', 'B', 14);
 $pdf->SetTextColor(255, 0, 0); // Set text color to red
 
 // Add background image
-$pdf->Image('./image/BG.png', 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
+$pdf->Image('./image/BG.png', 0, 0, $pageWidth, $pageHeight, '', '', '', false, 300, '', false, false, 0);
 
 // Add QR code
 $pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
