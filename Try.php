@@ -41,10 +41,10 @@ $numberPosition = 50;
 
 // Output data on the PDF
 $pdf->SetXY($namePosition, 110);
-$pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
+$pdf->Cell(0, 10, 'Name:     ' . $data['Name'], 0, 1);
 
 $pdf->SetXY($numberPosition, 117);
-$pdf->Cell(0, 10, 'Number: ' . $data['Phone'], 0, 1);
+$pdf->Cell(0, 10, 'Number:   ' . $data['Phone'], 0, 1);
 
 // Output the PDF to the browser
 $pdf->Output('id_card_' . $id . '.pdf', 'I');
