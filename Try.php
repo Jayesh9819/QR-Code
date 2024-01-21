@@ -15,8 +15,8 @@ $result = $stmt->get_result();
 $data = $result->fetch_assoc();
 
 // Define the custom page size (in millimeters)
-$pageWidth = 150; // 3 times A4 width
-$pageHeight = 200  ; // 2 times A4 height
+$pageWidth = 160; // 3 times A4 width
+$pageHeight = 240  ; // 2 times A4 height
 
 // Create TCPDF instance with custom page size
 $pdf = new TCPDF('P', 'mm', array($pageWidth, $pageHeight), true, 'UTF-8', false);
@@ -30,10 +30,10 @@ $pdf->SetFont('helvetica', 'B', 14);
 $pdf->SetTextColor(255, 0, 0); // Set text color to red
 
 // Add background image
-$pdf->Image('./image/bg1.png', 0, 0, $pageWidth, $pageHeight, '', '', '', false, 300, '', false, false, 0);
+$pdf->Image('./image/bg1.png', 0, 0, 85, 114, '', '', '', false, 300, '', false, false, 0);
 
 // Add QR code
-// $pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
+$pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
 
 // Set position for name and number
 $namePosition = 50;
