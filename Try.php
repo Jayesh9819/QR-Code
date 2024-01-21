@@ -15,11 +15,11 @@ $result = $stmt->get_result();
 $data = $result->fetch_assoc();
 
 // Define the custom page size (in millimeters)
-$pageWidth = 160; // 16 cm
-$pageHeight = 240; // 24 cm
+$pageWidth = 16; // 16 cm
+$pageHeight = 24; // 24 cm
 
 // Create TCPDF instance with custom page size
-$pdf = new TCPDF('L', 'mm', array($pageWidth, $pageHeight), true, 'UTF-8', false);
+$pdf = new TCPDF('L', 'cm', array($pageWidth, $pageHeight), true, 'UTF-8', false);
 
 $pdf->SetCreator('JD');
 $pdf->SetAuthor('CS');
