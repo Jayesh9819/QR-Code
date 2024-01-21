@@ -64,7 +64,7 @@
                 <!-- <label for="Lname">by</label> -->
                 <?php
                 if(isset($by)){
-                   echo '<input hidden type="text" name="by" placeholder="Surname" value="<?php echo $by ?>">';
+                   echo '<input hidden type="text" name="by" placeholder="Surname" value="' .$by.'">';
 
                 }
                 
