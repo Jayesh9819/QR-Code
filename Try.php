@@ -37,13 +37,13 @@ $pdf->Image($data['OR'], 50, 50, 50, 50, 'png');
 
 // Set position for name and number
 $namePosition = 50;
-$numberPosition = 100;
+$numberPosition = 50;
 
 // Output data on the PDF
-$pdf->SetXY($namePosition, 130);
+$pdf->SetXY($namePosition, 115);
 $pdf->Cell(0, 10, 'Name: ' . $data['Name'], 0, 1);
 
-$pdf->SetXY($numberPosition, 100);
+$pdf->SetXY($numberPosition, 120);
 $pdf->Cell(0, 10, 'Number: ' . $data['Phone'], 0, 1);
 
 // Output the PDF to the browser
