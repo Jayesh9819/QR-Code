@@ -27,7 +27,7 @@ $pdf->SetTitle('ID Card');
 $pdf->AddPage();
 
 $pdf->SetFont('helvetica', 'B', 14);
-$pdf->SetTextColor(255, 0, 0); // Set text color to red
+$pdf->SetTextColor(0, 0, 128);
 
 // Add background image
 $pdf->Image('./image/bg1.png', 0, 0, 160, 240, '', '', '', false, 300, '', false, false, 0);
