@@ -33,7 +33,7 @@ $pdf->SetTextColor(255, 0, 0); // Set text color to red
 $pdf->Image('./image/bg1.png', 0, 0, $pageWidth, $pageHeight, '', '', '', false, 300, '', false, false, 0);
 
 // Add QR code
-$pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
+// $pdf->Image($data['OR'], 50, 10, 100, 100, 'png');
 
 // Set position for name and number
 $namePosition = 50;
