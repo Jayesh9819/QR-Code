@@ -34,6 +34,7 @@ $NOC = $_POST['NOC'];
 $Address = $_POST['Address'];
 $Phone = $_POST['Phone'];
 $Email = $_POST['Email'];
+$by=$_POST['by'];
 
 // Generate a unique ID using the function
 try {
@@ -56,10 +57,10 @@ try {
     $pixel_Size = 10;
     $frame_Size = 10;
 
-    $query = "INSERT INTO registration VALUES('', '$Name', '$Designation', '$NOC', '$Address', '$Phone', '$Email', '$file','','','$uniqueId')";
+    $query = "INSERT INTO registration VALUES('', '$Name', '$Designation', '$NOC', '$Address', '$Phone', '$Email', '$file','','$by','$uniqueId')";
     if ($mysqli->query($query) === true) {
         Qrcode::png($pname, $file, $ecc, $pixel_Size, $frame_Size);
-        header('location:index.php?msg=data added successfully');
+        header('location:sucess.php?msg='.$by);
     } else {
         throw new Exception("Database Error: " . $mysqli->error);
     }
