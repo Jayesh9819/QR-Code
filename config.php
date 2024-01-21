@@ -1,6 +1,6 @@
 <?php
 
-    $mysqli = new mysqli("62.72.28.52","u114668675_swadeshi","Nitish@69","u114668675_swadeshi");
+    $mysqli = new mysqli("62.72.28.52","u114668675_jd","Jayesh8169","u114668675_swad");
 
     if($mysqli->connect_error)
         // gygbgbgbygbgyb
